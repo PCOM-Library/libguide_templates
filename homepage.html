@@ -1,0 +1,100 @@
+<body class="s-lib-public-body pcom-guide-homepage">
+	<header role="banner">
+		{{skip_link}}
+        <!-- BEGIN: Page Header -->
+            {{public_header}}
+        <!-- END: Page Header -->
+		
+        <!-- BEGIN: Content Header -->
+        <div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
+			<nav id="s-lib-bc" aria-labelledby="breadcrumbs-heading">
+				<h2 class="sr-only" id="breadcrumbs-headings">Breadcrumbs</h2>
+				{{breadcrumbs}}
+			</nav>
+            <h1 id="s-lib-public-header-title">{{title}}</h1>
+            <div id="s-lib-public-header-desc">{{system_intro}}</div>
+        </div>
+        <!-- END: Content Header -->
+		
+
+	</header>
+	<main>
+        <!-- BEGIN: Nav Bar -->
+        <div id="s-lib-public-nav" class="container s-lib-side-borders">
+            {{page_nav}}
+        </div>
+        <!-- END: Nav Bar -->
+<script src="https://libanswers.pcom.edu/load_chat.php?hash=d150f362a55fb1951098db0b5571d042"></script>		
+		<div id="libchat_d150f362a55fb1951098db0b5571d042"></div>
+        <!-- BEGIN: content -->
+        <div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders">
+            <div  id="s-lg-index-cols"  class="row">
+                <div  id="col1"  class="col-md-8 center">
+                    <div class="clearfix">
+                        <div id="s-lg-hp-nav">
+                            <ul>
+                                <li>
+                                    <ul class="nav nav-pills">
+                                        {{button_all_guides}}
+                                        {{button_by_subject}}
+                                    </ul>
+                                </li>
+                                <li id="s-lg-hp-nav-bottom">
+                                    <div class="clearfix">
+                                        {{search_guides}}
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        {{guide_list_controls}}
+                    </div>
+                    <div id="s-lg-index-list" class="">
+                        {{content}}
+                    </div>
+                    <section id="pcom-dept-section" aria-label="List of Department and Program Guides" style="display:none">
+                        <div id="pcom-list-departments" class="row">
+                            <h2>Departments and Programs</h2>
+                            <div class="col-md-6 center pcom-homepage-column" id="pcom-departments-col-1"></div>
+                            <div class="col-md-6 center pcom-homepage-column" id="pcom-departments-col-2"></div>
+                        </div>
+                    </section>
+                    <section id="pcom-additional-section" aria-label="List of Additional Guides" style="display:none">
+                        <div id="pcom-list-additional" class="row">
+                            <h2>Additional Topics</h2>
+                            <div class="col-md-6 center pcom-homepage-column" id="pcom-additional-col-1"></div>
+                            <div class="col-md-6 center pcom-homepage-column" id="pcom-additional-col-2"></div>
+                        </div>
+                    </section>
+                </div>
+                <div  id="col2"  class="col-md-4 center">
+                    {{content_boxes}}
+                </div>
+            </div>
+        </div>
+        <!-- END: content -->
+	</main>
+    <footer aria-labelledby="pcom-footer-label" id="page-footer">
+		<h2 id="pcom-footer-label" class="sr-only">
+			Footer
+		</h2>
+		<!-- BEGIN: PCOM footer content -->
+			{{public_footer}}
+        <!-- END: PCOM footer content -->
+		<!-- BEGIN: System Footer -->
+			{{system_footer}}
+        <!-- END: System Footer -->
+		<!-- BEGIN: LibGuide footer extra -->
+			<div id="s-lib-alert" title="">
+				<div id="s-lib-alert-content"></div>
+			</div>
+			<div id="s-lib-popover-title" class="hide">
+				<span class="text-info"><strong>title</strong></span>
+				<button type="button" id="popclose" class="close" onclick="jQuery('.s-lib-popover').popover('hide')">&times;</button>
+			</div>
+			<div id="s-lib-popover-content" class="hide">
+				<span class="fa fa-refresh fa-spin" aria-hidden="true"></span> Loading...
+				<button class="btn btn-default btn-sm popclose" type="button">Close</button>
+			</div>
+		<!-- END: LibGuide footer extra -->
+	</footer>
+</body>
