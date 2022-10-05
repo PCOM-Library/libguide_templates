@@ -1,0 +1,118 @@
+
+.pcom-guide-homepage .pcom-subject-disclosure-container {
+	line-height: 1.75;
+	font-size: 1rem;	
+	margin-bottom: 0.375em
+}
+
+.pcom-guide-homepage .pcom-subject-disclosure-container + .pcom-subject-disclosure-container {
+	margin-top: 0.375em
+}
+
+.pcom-guide-homepage .pcom-subject-disclosure-container h3 {
+	background-color: var(--pcom-blue);
+	border-radius: var(--pcom-border-radius);
+	margin: 0;
+	padding: 0.625em 1em;
+	font-size: inherit;
+	line-height: inherit;
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+}
+
+.pcom-guide-homepage .pcom-subject-disclosure-container h3.open {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.pcom-guide-homepage .pcom-subject-disclosure-container h3 button {
+	background: transparent;
+	padding: 0;
+	border: none;
+	color: #fff;
+	font-size: inherit;
+	line-height: inherit;
+	width: 100%;
+	text-align: left;
+	align-self: center;
+}
+
+.pcom-guide-homepage .pcom-subject-disclosure-container h3 button:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: var(--pcom-border-radius);
+}
+
+.pcom-guide-homepage .pcom-subject-disclosure-container h3:hover {
+	background: var(--pcom-yellow);
+}
+.pcom-guide-homepage .pcom-subject-disclosure-container h3:hover button {
+	color: var(--pcom-text);
+}
+
+.pcom-guide-homepage .pcom-subject-disclosure-container h3 button:focus {
+	outline: none;
+}
+.pcom-guide-homepage .pcom-subject-disclosure-container h3 button:focus:after {
+	outline: dotted currentColor 2px;
+	outline-offset: -5px;
+}
+
+.pcom-guide-homepage .pcom-subject-disclosure-container h3 button + span {
+	color: #fff;
+	background: var(--pcom-dark-blue) ;
+	border-radius: 4px;
+	line-height: 1;
+	padding: 0.5em;
+}
+
+.pcom-guide-homepage .pcom-subject-disclosure-container h3 + .pcom-collapsing-panel {
+	display: none;
+}
+
+.pcom-guide-homepage .pcom-subject-disclosure-container h3.open + .pcom-collapsing-panel {
+	display: block;
+}
+
+.pcom-guide-homepage .pcom-collapsing-panel {
+	border: solid 3px var(--pcom-blue);
+	border-bottom-left-radius: var(--pcom-border-radius);
+	border-bottom-right-radius: var(--pcom-border-radius);
+}
+
+.pcom-guide-homepage .pcom-subject-disclosure-container ul.s-lg-guide-list {
+	padding-left: 15px;
+}
+
+/* hide the guide tooltip */
+.pcom-guide-homepage .pcom-subject-disclosure-container .s-ui-helptip {
+	display: none;
+}
+
+.pcom-guide-homepage .pcom-subject-disclosure-container .pcom-collapsing-panel .alert-info {
+	background: var(--pcom-cool-gray);
+	color: var(--pcom-text);
+	border-color: var(--pcom-text);
+	border-width: 2px;
+	border-radius: var(--pcom-border-radius);
+}
+.pcom-guide-homepage .pcom-subject-disclosure-container .pcom-collapsing-panel .alert-info a {
+	display: block;
+	word-break: break-all;
+}
+
+.pcom-guide-homepage .pcom-subject-disclosure-container .s-lg-gtitle a.bold {
+	font-weight: 400;
+}
+
+/* remove extra whitespace at the top of the custom pages */
+#pcom-program-section h2,
+#pcom-subject-section h2 {
+	margin-top: 0;
+}
