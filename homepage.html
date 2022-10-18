@@ -1,11 +1,11 @@
-<body class="s-lib-public-body pcom-guide-homepage">
+<body class="s-lib-public-body pcom pcom-guide-homepage">
 	<script type="text/javascript" src="https://libapps.s3.amazonaws.com/sites/17614/include/subject-homepage.js"></script>
-	<script src="https://libanswers.pcom.edu/load_chat.php?hash=d150f362a55fb1951098db0b5571d042"></script>	
+
 
 	<header role="banner">
 		{{skip_link}}
         <!-- BEGIN: Page Header -->
-            {{public_header}}
+		{{public_header}}
         <!-- END: Page Header -->
 		
         <!-- BEGIN: Content Header -->
@@ -18,9 +18,8 @@
             <div id="s-lib-public-header-desc">{{system_intro}}</div>
         </div>
         <!-- END: Content Header -->
-		
-
 	</header>
+	
 	<main>
         <!-- BEGIN: Nav Bar -->
         <div id="s-lib-public-nav" class="container s-lib-side-borders">
@@ -28,7 +27,6 @@
         </div>
         <!-- END: Nav Bar -->
 	
-		<div id="libchat_d150f362a55fb1951098db0b5571d042"></div>
         <!-- BEGIN: content -->
         <div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders">
             <div id="s-lg-index-cols"  class="row">
@@ -56,9 +54,13 @@
                                     </ul>
                                 </li>
                                 <li id="s-lg-hp-nav-bottom">
-                                    <div class="clearfix">
-                                        {{search_guides}}
-                                    </div>
+									<form id="pcom-search-guides" role="search" action="/srch.php">
+										<label for="s-lg-guide-search">
+											Search:
+										</label>
+										<input type="text" id="s-lg-guide-search" name="q"  placeholder="Enter Search Words">
+										<button class="btn btn-default" type="submit">Search</button>
+									</form>
                                 </li>
                             </ul>
                         </div>
@@ -102,10 +104,10 @@
 			Footer
 		</h2>
 		<!-- BEGIN: System Footer -->
-			{{system_footer}}
+		{{system_footer}}
         <!-- END: System Footer -->
 		<!-- BEGIN: PCOM footer content -->
-			{{public_footer}}
+		{{public_footer}}
         <!-- END: PCOM footer content -->
 		<!-- BEGIN: LibGuide footer extra -->
 			<div id="s-lib-alert" title="">

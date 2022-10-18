@@ -1,6 +1,14 @@
 // Code for the PCOM Navigation
 window.addEventListener('load', function(event) { 
-	let e = document.getElementById('pcom-nav-toggle');
+	let e = null;
+	// on guides, set aria-current 
+	if(document.body.classList.contains('pcom-guide')) {
+		e = document.querySelector('#s-lg-tabs-container .nav-pills > .active > a');
+		if(e != null)
+			e.setAttribute('aria-current','page');
+	}
+
+	e = document.getElementById('pcom-nav-toggle');
 	e.addEventListener('click', function(evt) {
 		if(evt.target.getAttribute('aria-expanded') == 'false') {
 			evt.target.setAttribute('aria-expanded', 'true');
