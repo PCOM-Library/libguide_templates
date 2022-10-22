@@ -1,0 +1,49 @@
+.s-lib-box {
+	position: relative;
+}
+
+.s-lib-box .pcom-box-anchor {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: var(--pcom-yellow);
+	line-height: normal;
+	text-decoration: none;
+}
+
+.s-lib-box .s-lib-box-title,
+.s-lib-box .pcom-box-anchor {
+	padding: .5rem .625rem;
+}
+
+.s-lib-box .pcom-box-anchor:focus {
+	outline-offset: -4px !important;
+	border-radius: var(--pcom-border-radius);
+}
+.s-lib-box .pcom-box-anchor:focus,
+.s-lib-box .pcom-box-anchor:hover {
+	color: var(--pcom-cyan);
+}
+
+.s-lib-box .pcom-box-anchor:focus span.sr-only,
+.s-lib-box .pcom-box-anchor:hover span.sr-only {
+	clip: auto;
+	clip-path: none;
+	height: auto;
+	width: auto;
+	overflow: auto;
+	padding: 0.5em;
+	display: block;
+	right: calc(100% + .125em);
+	z-index: 100;
+	top: calc(100% - 1em);
+	white-space: nowrap;
+	max-width: 18em;
+	text-overflow: ellipsis;
+	overflow-x: hidden;
+	background-color: var(--pcom-cyan);
+	color: var(--pcom-dark-blue);
+	border: solid 2px var(--pcom-blue);
+	border-radius: var(--pcom-border-radius);
+	box-shadow: 0.25rem 0.25rem 0.375rem rgba(0, 0, 0, 0.6)
+}

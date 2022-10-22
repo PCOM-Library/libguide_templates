@@ -1,0 +1,34 @@
+.pcom-profile-box {
+	font-size: 0.875rem;
+	position: relative;
+	margin-bottom: 1rem;
+	display: flex;	
+}
+
+.pcom-profile-box .image-holder {
+	max-width: 80px;
+	order: 1;
+}
+.pcom-profile-box .info-holder {
+	max-width: fit-content;
+	margin-left: 0.75rem;
+	order: 2;
+}
+
+.pcom-profile-heading {
+	font-size: inherit;
+	display: inline-block;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.pcom-profile-pronouns {
+	display: inline;
+}
+.pcom-profile-email {
+	display: block;
+}
+.pcom-profile-phone {
+	display: block;
+}

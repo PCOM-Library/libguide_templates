@@ -3,7 +3,7 @@
 		{{skip_link}}
         <!-- BEGIN: Page Header -->
 		{{public_header}}
-        <!-- END: Page Header -->
+        <!-- END: Page Header -->	
 		
 		<!-- BEGIN: Content Header -->
 		<div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
@@ -11,6 +11,38 @@
 				<h2 class="sr-only" id="breadcrumbs-headings">Breadcrumbs</h2>
 				{{breadcrumbs}}
 			</nav>
+		</div>
+		
+		<div class="container s-lib-side-borders">
+			<h2 class="sr-only" id="pcom-subject-selector-heading2">
+				Subject Browsing
+			</h2>
+			<div id="pcom-search-bar-desc">
+				Browse our best resources, organized by subject
+			</div>
+			<h3 class="sr-only" id="pcom-subject-selector-heading3">
+				Select a Subject
+			</h3>
+			<div id="s-lg-sb-search-bar" class="row">
+				<div id="sb-search-col-1" class="col-md-12 center">
+					{{navbar}}
+				</div>
+			</div>
+		</div>
+		<script>
+			let subject_nav = document.querySelector('#sb-search-col-1 nav');
+			if(subject_nav != null) {
+				subject_nav.setAttribute('aria-labelledby','pcom-subject-selector-heading3');
+			}
+			else {
+				window.addEventListener('load', function(event) { 
+					let e = document.querySelector('#sb-search-col-1 nav');
+					e.setAttribute('aria-labelledby','pcom-subject-selector-heading3');
+				});
+			}
+		</script>
+		
+		<div id="s-lib-public-header-2" class="s-lib-header container s-lib-side-borders">
 			<h1 id="s-lib-public-header-title">{{page_title}}</h1>
 			<div id="s-lib-public-header-desc">{{page_description}}</div>
 		</div>
@@ -26,55 +58,62 @@
 
 		<!-- BEGIN: content -->
 		<div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders" tabindex="-1">
-			<section aria-label="Subject Search Bar">
-				<div id="s-lg-sb-search-bar" class="row">
-					<div id="sb-search-col-1" class="col-md-12 center">
-						{{navbar}}
-					</div>
-				</div>
-			</section>
 			<section aria-label="Content by Subject">
 				<div id="s-lg-sb-cols" class="row">
 					<div id="col1" class="col-md-8 center">
-						<ul class="nav nav-tabs margin-bottom-med">
-							<!-- Guide tab -->
-							<li class="active">
-								<a href="#s-lg-sb-guides" data-toggle="tab">{{guides_tab_label}}</a>
-							</li>
-							<!-- Databases tab -->
-							<li class="">
-								<a href="#s-lg-sb-databases" data-toggle="tab">{{databases_tab_label}}</a>
-							</li>
-							<!-- Blog Posts tab -->
-							<li class="">
-								<a href="#s-lg-sb-blog-posts" data-toggle="tab">{{blog_posts_tab_label}}</a>
-							</li>
-							<!-- ER Courses tab -->
-							<li class="">
-								<a href="#s-lg-sb-er-courses" data-toggle="tab">{{courses_tab_label}}</a>
-							</li>
-						</ul>
+						
+						<!--tablist -->
+						<h3 class="sr-only" id="pcom-subject-page-tablist">
+							Content Types
+						</h3>
+						<div class="pcom-tablist onstartup" role="tablist" aria-labelledby="pcom-subject-page-tablist">
+							<button type="button" role="tab" aria-selected="false" aria-controls="s-lg-sb-guides" tabindex="-1" id="pcom_guides_tab">
+								{{guides_tab_label}}
+							</button>
+							
+							<div class="spacer"></div>
+							
+							<button type="button" role="tab" aria-selected="false" aria-controls="s-lg-sb-databases" tabindex="-1" id="pcom_databases_tab">
+								{{databases_tab_label}}
+							</button>
+							
+							<!--
+								<div class="spacer"></div>
+								
+								<button type="button" role="tab" aria-selected="false" aria-controls="s-lg-sb-blog-posts" tabindex="-1" id="pcom_blog_posts_tab">
+									{{blog_posts_tab_label}}
+								</button>
+								
+								<div class="spacer"></div>
+								<button type="button" role="tab" aria-selected="false" aria-controls="s-lg-sb-er-courses" tabindex="-1" id="pcom_courses_tab">
+									{{courses_tab_label}}
+								</button>
+							-->			
+							
+							<div class="hfill"></div>
+						</div>
 
 						<!-- Tab panes -->
-						<div class="tab-content margin-bottom-med">
-							<div class="tab-pane active" id="s-lg-sb-guides">
+						<div class="pcom-tab-content onstartup margin-bottom-med">
+							<div class="tab-pane" id="s-lg-sb-guides" role="tabpanel" aria-labelled-by="pcom_guides_tab">
 								<!-- Guides content -->
 								<div id="s-lg-sb-content-guides" class="pad-right-sm"></div>
 							</div>
-							<div class="tab-pane " id="s-lg-sb-databases">
+							<div class="tab-pane " id="s-lg-sb-databases" role="tabpanel" aria-labelled-by="pcom_databases_tab">
 								<!-- Databases content -->
 								<div id="s-lg-sb-content-databases" class="pad-right-sm"></div>
 							</div>
-							<div class="tab-pane " id="s-lg-sb-blog-posts">
+							<div class="tab-pane " id="s-lg-sb-blog-posts" role="tabpanel" aria-labelled-by="pcom_blog_posts_tab">
 								<!-- Blog Posts content -->
 								<div id="s-lg-sb-content-blog-posts" class="pad-right-sm"></div>
 							</div>
-							<div class="tab-pane " id="s-lg-sb-er-courses">
+							<div class="tab-pane" id="s-lg-sb-er-courses" role="tabpanel" aria-labelled-by="pcom_courses_tab">
 								<!-- Blog Posts content -->
 								<div id="s-lg-sb-content-er-courses" class="pad-right-sm"></div>
 							</div>
 						</div>
 					</div>
+					
 					<div id="col2" class="col-md-4 center">
 						<div style="padding-top: 9px;"></div>
 						{{content_box_search}}
@@ -84,6 +123,8 @@
 			</section>
 		</div>
 		<!-- END: content -->
+		<!-- Mutators for the Page Content -->
+		<script type="text/javascript" src="https://libapps.s3.amazonaws.com/sites/17614/include/subject-page.js"></script>
 	</main>	
 	
 	<footer aria-labelledby="pcom-footer-label" id="page-footer">

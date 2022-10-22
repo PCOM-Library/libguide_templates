@@ -60,7 +60,7 @@
 	outline: none;
 }
 .pcom-guide-homepage .pcom-subject-disclosure-container h3 button:focus:after {
-	outline: solid currentColor 3px;
+	outline: solid 2px currentColor;
 	outline-offset: -5px;
 }
 
