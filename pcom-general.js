@@ -15,6 +15,11 @@ window.addEventListener('load', function(event) {
 			e.setAttribute('aria-current','page');
 	}
 
+	if(document.getElementById('pcom-site-alert')) {
+		if(document.querySelector('#pcom-site-alert .s-lib-box-content').innerText.trim().length > 0)
+			document.getElementById('pcom-site-alert').style.display = 'block';
+	}
+
 	e = document.getElementById('pcom-nav-toggle');
 	e.addEventListener('click', function(evt) {
 		if(evt.target.getAttribute('aria-expanded') == 'false') {

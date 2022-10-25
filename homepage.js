@@ -121,6 +121,7 @@ const subjectObserver = new MutationObserver(function(mutations_list) {
 			/* this is the homepage so split subjects */
 			if(document.location == HOMEPAGE_URL) {
 				separateSubjectsHomepage();
+				document.getElementById('pcom-quick-links-section').style.display ='block';
 				document.getElementById('pcom-program-section').style.display ='block';
 				document.getElementById('pcom-additional-section').style.display = 'block';
 			}
@@ -139,8 +140,6 @@ const subjectObserver = new MutationObserver(function(mutations_list) {
 });
 
 let urlParams = new URLSearchParams(window.location.search);
-console.log(document.location == HOMEPAGE_URL);
-console.log(urlParams.get('b') == 's');
 if(document.location == HOMEPAGE_URL || urlParams.get('b') == 's') {
 	subjectObserver.observe(document.body, { subtree: true, childList: true });
 }

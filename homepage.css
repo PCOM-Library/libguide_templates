@@ -20,6 +20,9 @@
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: flex-start;
+	border: solid 3px var(--pcom-blue);
+	border-bottom-color: transparent;
+	margin-bottom: -3px;
 }
 
 .pcom-guide-homepage .pcom-subject-disclosure-container h3.open {
@@ -30,7 +33,7 @@
 .pcom-guide-homepage .pcom-subject-disclosure-container h3 button {
 	background: transparent;
 	padding: 0;
-	border: none;
+	border: 0;
 	color: #fff;
 	font-size: inherit;
 	line-height: inherit;
@@ -51,6 +54,7 @@
 
 .pcom-guide-homepage .pcom-subject-disclosure-container h3:hover {
 	background: var(--pcom-yellow);
+	border-bottom-color: var(--pcom-blue);
 }
 .pcom-guide-homepage .pcom-subject-disclosure-container h3:hover button {
 	color: var(--pcom-text);
@@ -103,7 +107,7 @@
 	border-radius: var(--pcom-border-radius);
 }
 .pcom-guide-homepage .pcom-subject-disclosure-container .pcom-collapsing-panel .alert-info a {
-	display: block;
+	display: inline-block;
 	word-break: break-all;
 }
 

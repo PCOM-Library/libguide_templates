@@ -42,8 +42,8 @@ class PCOMTabPanel {
 
 		this.setSelectedTab(this.firstTab);
 		
-		this.tablistNode.classList.toggle('onstartup');
-		this.tabpanels[0].parentElement.classList.toggle('onstartup');
+		this.tablistNode.classList.remove('onstartup');
+		this.tabpanels[0].parentElement.classList.remove('onstartup');
 	}
 
 	setSelectedTab(currentTab) {
@@ -141,32 +141,3 @@ window.addEventListener('load', function () {
 });
 
 
-/*window.addEventListener('load', function(event) { 
-	let tabpanels = document.querySelectorAll('.pcom-tablist');
-	for(tp of tabpanels) {
-		let buttons = tp.querySelectorAll('button[role="tab"]');
-		for(b of buttons) {
-			b.addEventListener('click', function(evt) {
-				let button = evt.target;
-				let old_button = button.parentElement.querySelector('button[aria-selected="true"]');
-				console.log(button);
-				// check if currently selected button
-				if(button.getAttribute('aria-selected') == 'true') 
-					return;
-				
-				// set up the new one
-				button.setAttribute('aria-selected', 'true');
-				button.setAttribute('tabindex', '0');
-				document.getElementById(button.getAttribute('aria-controls')).classList.toggle('active');
-				
-				
-				old_button.setAttribute('aria-selected', 'false');
-				old_button.setAttribute('tabindex', '-1');
-				document.getElementById(old_button.getAttribute('aria-controls')).classList.toggle('active');
-				
-			});
-		}	
-	}
-
-});
-*/

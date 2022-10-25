@@ -7,7 +7,6 @@
 	background: var(--pcom-dark-blue);
 	color: var(--pcom-white);
 	border: solid 2px var(--pcom-dark-blue);
-	border-bottom: 0;
 	border-radius: var(--pcom-border-radius) var(--pcom-border-radius) 0 0;
 	padding: 0.375rem .625rem;
 	position: relative;
@@ -19,20 +18,13 @@
 	border-radius: var(--pcom-border-radius) var(--pcom-border-radius) 0 0;
 }
 
-.pcom-tablist .spacer {
-	width: 0.25em;
-	border-bottom: solid 2px var(--pcom-dark-blue);
-}
-.pcom-tablist .hfill {
-  flex: 1 0 auto;
-	border-bottom: solid 2px var(--pcom-dark-blue);
-}
-
 .pcom-tablist button[aria-selected="true"] {
 	background: var(--pcom-cool-gray);
 	color: var(--pcom-text);
 }
+/* cover up the bottom border */
 .pcom-tablist button[aria-selected="true"]:before {
+	content: '';
 	position: absolute;
 	display: block;
 	width: 100%;
@@ -40,6 +32,20 @@
 	bottom: -4px;
 	left: 0;
 	background: var(--pcom-cool-gray);
+}
+
+.pcom-tablist button[aria-selected="false"]:hover {
+	background: var(--pcom-yellow);
+	color: var(--pcom-text);
+}
+
+.pcom-tablist .spacer {
+	width: 0.25em;
+	border-bottom: solid 2px var(--pcom-dark-blue);
+}
+.pcom-tablist .hfill {
+  flex: 1 0 auto;
+	border-bottom: solid 2px var(--pcom-dark-blue);
 }
 
 .pcom-tab-content {

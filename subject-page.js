@@ -32,6 +32,32 @@ const subjectPageGuideObserver = new MutationObserver(function(mutations_list) {
 });
 subjectPageGuideObserver.observe(document.getElementById('s-lg-sb-guides'), { subtree: true, childList: true });
 
+const subjectPageProfileObserver = new MutationObserver(function(mutations_list) {
+	let expert = document.getElementById('s-lg-box-profile-container');
+	// handle single expert situation
+	if(expert != null) {
+		let new_expert = htmlToElement('<div class="s-lib-featured-profile-container"><a href=""><div class="s-lib-featured-profile-image"><img loading="lazy" src="" alt=""></div><div class="s-lib-profile-div s-lib-featured-profile-name"></div></a></div>');
+		
+		let profile_id = expert.querySelector('.s-lib-profile-image img').getAttribute('src').match(/\/accounts\/([0-9]+)\//)[1];
+		e = new_expert.querySelector('img');
+		e.setAttribute('src', expert.querySelector('.s-lib-profile-image img').getAttribute('src'));
+		e.setAttribute('alt', expert.querySelector('.s-lib-profile-image img').getAttribute('alt'));
+		
+		new_expert.querySelector('a').setAttribute('href', 'https://customertesting4.libguides.com/prf.php?account_id=' + profile_id);
+		
+		new_expert.querySelector('.s-lib-featured-profile-name').innerText = expert.querySelector('.s-lib-profile-name').innerText.trim();
+		document.querySelector('#s-lg-sb-experts-div .pad-top-sm').appendChild(new_expert);
+		subjectPageProfileObserver.disconnect();
+		return;
+	}
+	if(document.querySelector('.s-lib-featured-profile-container') != null) {
+		subjectPageProfileObserver.disconnect();
+		return;
+	}
+});
+subjectPageProfileObserver.observe(document.getElementById('col2'), { subtree: true, childList: true });
+
+
 window.addEventListener('DOMContentLoaded', function(evt) {
 	let e;
 	let subject = document.querySelector('h1').innerText.trim();
