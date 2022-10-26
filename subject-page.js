@@ -3,7 +3,7 @@ var GUIDE_COUNT = 0, GUIDE_TOTAL = -1;
 const subjectPageGuideObserver = new MutationObserver(function(mutations_list) {
 	mutations_list.forEach(function(mutation) {
 		for(added_node of mutation.addedNodes) {
-			// skip non-elemtn nodes
+			// skip non-element nodes
 			if(added_node.nodeType != 1)
 				continue;
 			
@@ -31,6 +31,23 @@ const subjectPageGuideObserver = new MutationObserver(function(mutations_list) {
 	}
 });
 subjectPageGuideObserver.observe(document.getElementById('s-lg-sb-guides'), { subtree: true, childList: true });
+
+const subjectPageDatabaseObserver = new MutationObserver(function(mutations_list) {
+	mutations_list.forEach(function(mutation) {
+		for(added_node of mutation.addedNodes) {
+			// skip non-element nodes
+			if(added_node.nodeType != 1)
+				continue;
+			if(added_node.querySelector('.s-lg-db-panel-title')) {
+				for(e of document.querySelectorAll('.s-lg-db-panel-title')) {
+					e.setAttribute('role', 'heading');
+					e.setAttribute('aria-level', '4');
+				}
+			}
+		}
+	});
+});	
+subjectPageDatabaseObserver.observe(document.getElementById('s-lg-sb-databases'), { subtree: true, childList: true });
 
 const subjectPageProfileObserver = new MutationObserver(function(mutations_list) {
 	let expert = document.getElementById('s-lg-box-profile-container');

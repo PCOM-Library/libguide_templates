@@ -56,7 +56,7 @@ const PROGRAMS = [
 	'Physician Assistant Studies',
 	'Psychology and Behavioral Sciences'
 ];
-const HOMEPAGE_URL = 'https://customertesting4.libguides.com/';
+const HOMEPAGE_URL = 'https://libguides.pcom.edu/';
 
 function separateSubjectsHomepage() {
 	let subjects = document.querySelectorAll('#s-lg-index-list-subjects .panel-heading');

@@ -20,8 +20,7 @@
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: flex-start;
-	border: solid 3px var(--pcom-blue);
-	border-bottom-color: transparent;
+	border: solid 3px var(--pcom-dark-blue);
 	margin-bottom: -3px;
 }
 
@@ -54,7 +53,7 @@
 
 .pcom-guide-homepage .pcom-subject-disclosure-container h3:hover {
 	background: var(--pcom-yellow);
-	border-bottom-color: var(--pcom-blue);
+	border-bottom-color: var(--pcom-dark-blue);
 }
 .pcom-guide-homepage .pcom-subject-disclosure-container h3:hover button {
 	color: var(--pcom-text);
@@ -85,7 +84,7 @@
 }
 
 .pcom-guide-homepage .pcom-collapsing-panel {
-	border: solid 3px var(--pcom-blue);
+	border: solid 3px var(--pcom-dark-blue);
 	border-bottom-left-radius: var(--pcom-border-radius);
 	border-bottom-right-radius: var(--pcom-border-radius);
 }
@@ -119,4 +118,65 @@
 #pcom-program-section h2,
 #pcom-subject-section h2 {
 	margin-top: 0;
+}
+
+/************
+ QUICK LINKS
+*************/
+.pcom-guide-homepage #pcom-quick-links {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.pcom-guide-homepage #pcom-quick-links .s-lib-box {
+	border-radius: 0;
+	border: 0;
+}
+.pcom-guide-homepage #pcom-quick-links .s-lib-box h2 {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0 0 .25rem;
+	color: var(--pcom-text);
+	background: transparent;
+	font-size: 1.375rem;
+	font-weight: 700;
+	border-bottom: solid 3px var(--pcom-dark-gray);
+}
+.pcom-guide-homepage #pcom-quick-links .s-lib-box .s-lib-box-content {
+	padding: .5rem 0 0;
+}
+
+.pcom-guide-homepage #pcom-quick-links .s-lib-box .s-lib-box-content ul {
+	list-style: none;
+	columns: 2;
+	padding: 0;
+	break-inside: avoid-column;
+	margin: 0;
+}
+
+@media only screen and (min-width: 50rem) {
+	.pcom-guide-homepage #pcom-quick-links .s-lib-box .s-lib-box-content ul {
+		columns: 3;
+	}
+}
+
+.pcom-guide-homepage #pcom-quick-links .s-lib-box .s-lib-box-content ul li {
+	display: block;
+	margin: 0 .5rem .25rem .5rem;
+	break-inside: avoid;
+	position: relative;
+	padding-left: .75em;
+}
+.pcom-guide-homepage #pcom-quick-links .s-lib-box .s-lib-box-content ul li:before {
+	content: '\f0c8';
+	font-family: FontAwesome;
+	font-size: .5em;
+	position: absolute;
+	top: .5rem;
+	left: 0;
+	color: var(--pcom-dark-red);
+}
+
+.pcom-guide-homepage #pcom-quick-links .s-lib-box .s-lib-box-content ul li a {
+	display: inline-block;
 }

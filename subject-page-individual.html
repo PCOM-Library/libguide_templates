@@ -63,18 +63,17 @@
 					<div id="col1" class="col-md-8 center">
 						
 						<!--tablist -->
-						<h3 class="sr-only" id="pcom-subject-page-tablist">
+						<h2 class="sr-only" id="pcom-subject-page-tablist">
 							Content Types
-						</h3>
+						</h2>
 						<div class="pcom-tablist onstartup" role="tablist" aria-labelledby="pcom-subject-page-tablist">
-							<button type="button" role="tab" aria-selected="false" aria-controls="s-lg-sb-guides" tabindex="-1" id="pcom_guides_tab">
-								{{guides_tab_label}}
-							</button>
-							
-							<div class="spacer"></div>
-							
 							<button type="button" role="tab" aria-selected="false" aria-controls="s-lg-sb-databases" tabindex="-1" id="pcom_databases_tab">
 								{{databases_tab_label}}
+							</button>
+							<div class="spacer"></div>
+							
+							<button type="button" role="tab" aria-selected="false" aria-controls="s-lg-sb-guides" tabindex="-1" id="pcom_guides_tab">
+								{{guides_tab_label}}
 							</button>
 							
 							<!--
@@ -95,22 +94,26 @@
 
 						<!-- Tab panes -->
 						<div class="pcom-tab-content onstartup margin-bottom-med">
-							<div class="tab-pane" id="s-lg-sb-guides" role="tabpanel" aria-labelled-by="pcom_guides_tab">
-								<!-- Guides content -->
-								<div id="s-lg-sb-content-guides" class="pad-right-sm"></div>
-							</div>
 							<div class="tab-pane " id="s-lg-sb-databases" role="tabpanel" aria-labelled-by="pcom_databases_tab">
+								<h3 class="sr-only">Databases</h3>
 								<!-- Databases content -->
 								<div id="s-lg-sb-content-databases" class="pad-right-sm"></div>
 							</div>
-							<div class="tab-pane " id="s-lg-sb-blog-posts" role="tabpanel" aria-labelled-by="pcom_blog_posts_tab">
-								<!-- Blog Posts content -->
-								<div id="s-lg-sb-content-blog-posts" class="pad-right-sm"></div>
+							<div class="tab-pane" id="s-lg-sb-guides" role="tabpanel" aria-labelled-by="pcom_guides_tab">
+								<h3 class="sr-only">Guides</h3>
+								<!-- Guides content -->
+								<div id="s-lg-sb-content-guides" class="pad-right-sm"></div>
 							</div>
-							<div class="tab-pane" id="s-lg-sb-er-courses" role="tabpanel" aria-labelled-by="pcom_courses_tab">
-								<!-- Blog Posts content -->
-								<div id="s-lg-sb-content-er-courses" class="pad-right-sm"></div>
-							</div>
+							<!--
+								<div class="tab-pane " id="s-lg-sb-blog-posts" role="tabpanel" aria-labelled-by="pcom_blog_posts_tab">
+									!-- Blog Posts content --
+									<div id="s-lg-sb-content-blog-posts" class="pad-right-sm"></div>
+								</div>
+								<div class="tab-pane" id="s-lg-sb-er-courses" role="tabpanel" aria-labelled-by="pcom_courses_tab">
+									!-- Blog Posts content --
+									<div id="s-lg-sb-content-er-courses" class="pad-right-sm"></div>
+								</div>
+							-->
 						</div>
 					</div>
 					
@@ -124,7 +127,7 @@
 		</div>
 		<!-- END: content -->
 		<!-- Mutators for the Page Content -->
-		<script type="text/javascript" src="https://libapps.s3.amazonaws.com/sites/17614/include/subject-page.js"></script>
+		<script type="text/javascript" src="https://libapps.s3.amazonaws.com/sites/4408/include/subject-page.js"></script>
 	</main>	
 	
 	<footer aria-labelledby="pcom-footer-label" id="page-footer">

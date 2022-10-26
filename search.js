@@ -34,6 +34,13 @@ window.addEventListener('DOMContentLoaded', function(evt) {
 		}
 		else
 			button.innerText = t.innerText.trim();
+		button.setAttribute('data-source', t.parentElement.getAttribute('data-source'));
+		
+		// pass click on through
+		button.addEventListener('click', function(evt) { 
+			document.querySelector('#s-srch-tabs li[data-source="' + evt.target.getAttribute('data-source') + '"] button').click();
+		});
+		
 		tablist.appendChild(button);
 		tablist.appendChild( htmlToElement('<div class="spacer"></div>') );
 	}
@@ -66,6 +73,7 @@ window.addEventListener('DOMContentLoaded', function(evt) {
 		});
 	});
 	SearchResultsObserver.observe(document.getElementById('s-lg-srch-cols'), { subtree: true, childList: true });
+	
 });
 
 
@@ -113,7 +121,7 @@ function generateSearchSorter(pcomHeader, container) {
 	
 		sorter.appendChild(htmlToElement('<span id="sort-label">Sorted By: </span>'));
 		// fake the span being a label
-		sorter.addEventListener('click', function(evt) {
+		sorter.querySelector('span').addEventListener('click', function(evt) {
 			evt.target.nextElementSibling.focus();
 		});
 		
@@ -141,32 +149,7 @@ function generateSearchSorter(pcomHeader, container) {
 	}
 }
 
-function reconfigureSearchResultsHeader(results) {
-	console.log(results);
-	let container = results.closest('[role="tabpanel"]');
-	let pcomHeader = container.querySelector('.pcom-results-header');
-	let addPcomHeader = false;
-	if(pcomHeader == null) {
-		pcomHeader = htmlToElement('<div class="pcom-results-header col-sm-12"><div class="pcom-search-heading"></div><div class="pcom-sorter"></div><div class="pcom-pager"></div></div>');
-		addPcomHeader = true;
-	}
-	let pcomFooter = container.querySelector('.pcom-results-footer');
-	let addPcomFooter = false;
-	if(pcomFooter == null) {
-		pcomFooter = htmlToElement('<div class="pcom-results-footer col-sm-12"></div>');
-		addPcomFooter = true;
-	}	
-
-	// heading
-	let numberResults = generateSearchHeading(pcomHeader, container);
-
-
-	if(numberResults > 0) {
-		// sorter 
-		generateSearchSorter(pcomHeader, container);
-		
-	}
-
+function generateSearchPager(pcomHeader, container) {
 	// pager 
 	if(container.querySelector('strong')) {
 		let pager = pcomHeader.querySelector('.pcom-pager');
@@ -218,6 +201,36 @@ function reconfigureSearchResultsHeader(results) {
 	}
 	else {
 	}
+}
+
+
+function reconfigureSearchResultsHeader(results) {
+	console.log(results);
+	let container = results.closest('[role="tabpanel"]');
+	
+	
+	let pcomHeader = container.querySelector('.pcom-results-header');
+	if(pcomHeader)
+		pcomHeader.remove();
+	pcomHeader = htmlToElement('<div class="pcom-results-header col-sm-12"><div class="pcom-search-heading"></div><div class="pcom-sorter"></div><div class="pcom-pager"></div></div>');
+	
+	
+	let pcomFooter = container.querySelector('.pcom-results-footer');
+	if(pcomFooter) 
+		pcomFooter.remove();
+	pcomFooter = htmlToElement('<div class="pcom-results-footer col-sm-12"></div>');
+
+	// heading
+	let numberResults = generateSearchHeading(pcomHeader, container);
+
+	if(numberResults > 0) {
+		// sorter 
+		generateSearchSorter(pcomHeader, container);
+		// pager
+		generateSearchPager(pcomHeader, container);
+	}
+
+
 	
 
 	// footer
@@ -227,22 +240,21 @@ function reconfigureSearchResultsHeader(results) {
 
 	try {
 		// hide the default stuff
+		
 		if(container.querySelector('strong')) {
 			container.querySelector('strong').classList.add('hidden');
 			if(container.querySelector('.s-srch-results + div  ul.pagination'))
 				container.querySelector('.s-srch-results + div  ul.pagination').classList.add('hidden');
 		}
 
-		if(addPcomHeader) {
-			if(container.querySelector('.s-srch-header'))
-				container.querySelector('.s-srch-header').insertAdjacentElement('beforebegin', pcomHeader);
-			else
-				container.querySelector('.s-srch-results').insertAdjacentElement('beforebegin', pcomHeader);
-		}
-		
-		if(addPcomFooter) {
-			container.querySelector('.s-srch-results').insertAdjacentElement('afterend', pcomFooter);
-		}
+		// add pcomHeader
+		if(container.querySelector('.s-srch-header'))
+			container.querySelector('.s-srch-header').insertAdjacentElement('beforebegin', pcomHeader);
+		else
+			container.querySelector('.s-srch-results').insertAdjacentElement('beforebegin', pcomHeader);
+
+		// add footer
+		container.querySelector('.s-srch-results').insertAdjacentElement('afterend', pcomFooter);
 	}
 	catch(error) {
 		console.log(error);
