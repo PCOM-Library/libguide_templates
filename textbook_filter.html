@@ -1,0 +1,52 @@
+<script type="text/javascript" src="https://libapps.s3.amazonaws.com/sites/4408/include/textbook_filter.js"></script>
+<link rel="stylesheet" type="text/css" href="https://libapps.s3.amazonaws.com/sites/4408/include/textbook_filter.css">
+
+<div id="textbookForms-container" style="display:none">
+	<h2 class="sr-only" id="textbookForms-heading">
+		Course Display Controls
+	</h2>
+
+	<div class="pcom-tablist" role="tablist" aria-labelledby="textbookForms-heading">
+		<button id="textbookFilterForm-filter" type="button" role="tab" aria-controls="filterForm-container">
+			Filter Courses
+		</button>
+		<div class="spacer"></div>
+		<button id="textbookFilterForm-select" type="button" role="tab" aria-controls="selectForm-container">
+			Select Specific Courses
+		</button>
+		<div class="hfill"></div>
+	</div>
+	<div class="pcom-tab-content" id="textbookFilterForms">
+		<div id="filterForm-container" class="tab-pane" role="tabpabel" aria-labelledby="textbookFilterForm-filter">
+			<form id="filterForm" novalidate>
+				<div id="filterForm-fields"></div>
+
+				<div class="textbook-filter-button-row">
+					<button id="filter_results" type="submit">Filter Courses</button>
+					<button id="filter_reset" type="reset">Reset</button>
+					<div class="hfill"></div>
+					<button id="filter_save" type="button">Save Filters</button>
+					<!-- add a toggle tip -->
+				</div>
+			</form>
+		</div>
+		
+		<div id="selectForm-container" class="tab-pane" role="tabpanel" aria-labelledby="textbookFilterForm-select">
+			<form id="selectForm" novalidate>
+				<fieldset>
+					<legend>Select Courses to Display</legend>
+				</fieldset>
+				<div class="textbook-filter-button-row">
+					<button id="select_results" type="submit">Show Courses</button>
+					<button id="select_reset" type="reset">Reset</button>
+					<div class="hfill"></div>
+					<button id="select_save" type="button">Save Selection</button>
+					<!-- add a toggle tip -->
+				</div>				
+			</form>
+		</div>
+	</div>
+	<div id="textbook_display_results" aria-live="polite" aria-atomic="true">
+		Showing all courses (0 hidden). 
+	</div>
+</div>

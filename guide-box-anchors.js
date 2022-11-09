@@ -15,7 +15,6 @@ window.addEventListener('load', function(event) {
 		
 		e.setAttribute('id',eID);
 		
-		console.log(eID,window.location.hash, moveFocusFlag);
 		if(loc.hash == ('#' + eID))
 			moveFocusFlag = true;
 		

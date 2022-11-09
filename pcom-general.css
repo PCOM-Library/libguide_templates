@@ -99,6 +99,13 @@ input::placeholder,
 	border-radius: var(--pcom-border-radius);
 }
 
+/******************
+ ADMIN SCREEN ONLY
+*******************/
+.admin-screen-only {
+	display: none;
+} 
+
 /*******************
  SCREEN READER ONLY 
  *******************/
@@ -516,7 +523,7 @@ footer#page-footer {
 	list-style: none;
 	padding: 0;
 	display: inline-block;
-	margin: 0
+	margin: 0;
 	text-align: center;
 }
 #pcom-footer-social-menu ul li {
