@@ -41,7 +41,7 @@ window.addEventListener('load', function(event) {
 			if(numbers.indexOf(c.number) == -1)
 				numbers.push(c.number);
 			
-			if(campuses.indexOf(c.campus) == -1)
+			if(typeof c.campus != 'undefined' && campuses.indexOf(c.campus) == -1)
 				campuses.push(c.campus);
 			
 			if(levels.indexOf(c.level) == -1)
@@ -65,6 +65,9 @@ window.addEventListener('load', function(event) {
 		opt.innerText = c;
 		campusHtml.querySelector('select').append(opt);
 	}
+	if(campuses.length == 0) {
+		campusHtml.style.display = 'none'; 
+	}
 	
 	// departments
 	let deptHtml = htmlToElement('<div><label for="dept_select">Department:</label><select id="dept_select"><option value="" selected>All</option></<select></div>');
@@ -73,6 +76,9 @@ window.addEventListener('load', function(event) {
 		opt.setAttribute('value', d);
 		opt.innerText = d;
 		deptHtml.querySelector('select').append(opt);
+	}
+	if(departments.length == 1) {
+		deptHtml.style.display = 'none'; 
 	}
 
 	// course level
@@ -88,6 +94,9 @@ window.addEventListener('load', function(event) {
 			opt.innerText = c + 's';
 		}
 		levelHtml.querySelector('select').append(opt);
+	}
+	if(levels.length == 1) {
+		levelHtml.style.display = 'none'; 
 	}
 	
 	// contains filter

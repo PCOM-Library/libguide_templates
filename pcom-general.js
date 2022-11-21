@@ -83,3 +83,32 @@ window.addEventListener('load', function(event) {
 		}
 	});
 });
+
+
+/* LEGACY SEARCH WIDGET CODE */
+$(document).ready(function() {
+	if(window.location.href.indexOf("libguides.pcom.edu") > -1) { 
+		jQuery(function ($) {
+			// function to change target of catalog search
+			/*
+			$(function() {
+				$('.catalogSearch').on('submit', function(event) {
+					event.preventDefault();
+					var queryString = $(this).serialize();
+					window.location = "https://web.archive.org/web/20220519062632/https://login.ezproxy.pcom.edu/login?url=http://pcom.hosted.exlibrisgroup.com/vwebv/search?" + queryString;
+				});
+			});
+			*/
+			
+			// function to change target of archives catalog search
+			$(function() {
+				$('.archivesCatalogSearch').on('submit', function(event) {
+					event.preventDefault();
+					var queryString = $(this).serialize();
+					window.location = "http://archivedb.hosted.exlibrisgroup.com/vwebv/search?" + queryString;
+				});
+			});
+		});
+	}
+});
+
