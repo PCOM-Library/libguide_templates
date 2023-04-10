@@ -1,6 +1,10 @@
 <script type="text/javascript" src="https://libapps.s3.amazonaws.com/sites/4408/include/textbook_filter.js"></script>
 <link rel="stylesheet" type="text/css" href="https://libapps.s3.amazonaws.com/sites/4408/include/textbook_filter.css">
 
+<div class="admin-note" style="text-align: center;">
+	<div style="font-size:3rem;"><strong>---- Course Selection Form ----</strong></div>
+	<div style="font-size:2rem;"><em>Do Not Edit This Box</em></div>
+</div>
 <div id="textbookForms-container" style="display:none">
 	<h2 class="sr-only" id="textbookForms-heading">
 		Course Display Controls
@@ -23,9 +27,7 @@
 
 				<div class="textbook-filter-button-row">
 					<button id="filter_results" type="submit">Filter Courses</button>
-					<button id="filter_reset" type="reset">Reset</button>
-					<div class="hfill"></div>
-					<button id="filter_save" type="button">Save Filters</button>
+					<button id="filter_reset" type="reset">Reset Form</button>
 					<!-- add a toggle tip -->
 				</div>
 			</form>
@@ -38,15 +40,29 @@
 				</fieldset>
 				<div class="textbook-filter-button-row">
 					<button id="select_results" type="submit">Show Courses</button>
-					<button id="select_reset" type="reset">Reset</button>
-					<div class="hfill"></div>
-					<button id="select_save" type="button">Save Selection</button>
-					<!-- add a toggle tip -->
+					<button id="select_reset" type="reset">Reset Form</button>
 				</div>				
 			</form>
 		</div>
 	</div>
+
+
 	<div id="textbook_display_results" aria-live="polite" aria-atomic="true">
 		Showing all courses (0 hidden). 
+	</div>
+
+	<div id="saveCourses-container">
+		<span id="saveCourses-status" class="sr-only" role="status"></span>
+		<button id="saveCourses" type="button" class="save" data-save-msg="Save Courses" data-saving-msg="Saving..." data-saved-msg="Courses Saved">
+			<span class="fa icon" aria-hidden="true"></span>
+			<span class="status">Save Courses</span>
+		</button>
+		<button id="restoreSave" type="button">
+			Restore Save
+		</button>
+		<div class="hfill"></div>
+		<button id="deleteSave" type="button">
+			Clear Save
+		</button>
 	</div>
 </div>
