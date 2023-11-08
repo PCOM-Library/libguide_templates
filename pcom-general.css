@@ -978,7 +978,7 @@ footer#page-footer {
 #s-lg-tabs-container .nav-pills > li > .s-lg-boxnav a {
 	display: block;
 	border: solid 2px var(--pcom-dark-blue);
-  border-radius: var(--pcom-border-radius);
+	border-radius: var(--pcom-border-radius);
 	background: var(--pcom-light-gray);
 	text-decoration: none;
 	padding: 0.375em .75em;
@@ -1007,10 +1007,11 @@ footer#page-footer {
 
 .s-lib-box .s-lib-box-title {
 	background: var(--pcom-dark-blue);
-	font-size: 1rem;
+	font-size: 1.0625rem;
+	letter-spacing: 0.025em;
 	border-bottom: 1px solid var(--pcom-dark-blue);
 	border-radius: 0;
-	font-weight: 400;
+	font-weight: 700;
 }
 
 #s-lg-guide-search-form > div {
