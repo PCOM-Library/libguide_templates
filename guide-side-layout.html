@@ -1,10 +1,8 @@
 <!-- SIDE NAV -->
 <body class="s-lg-guide-body pcom pcom-guide">
 	<link rel="stylesheet" type="text/css" href="https://libapps.s3.amazonaws.com/sites/4408/include/guide-profiles.css">
-	<link rel="stylesheet" type="text/css" href="https://libapps.s3.amazonaws.com/sites/4408/include/guide-box-anchors.css">
-	<script type="text/javascript" src="https://libapps.s3.amazonaws.com/sites/4408/include/guide-profiles.js"></script>
-	<script type="text/javascript" src="https://libapps.s3.amazonaws.com/sites/4408/include/guide-box-anchors.js"></script>
-	
+	<link rel="stylesheet" type="text/css" href="https://libapps.s3.amazonaws.com/sites/4408/include/pcom-libguide-accordion.css">
+
 	{{ADMIN_CMD_BAR}}
 	
 	<header role="banner">
@@ -41,6 +39,9 @@
 	</header>
 	
 	<main>
+		<!-- run the script for accordions here -->
+		<script type="text/javascript" src="https://libapps.s3.amazonaws.com/sites/4408/include/pcom-libguide-accordion.js"></script>
+		
 		<div id="s-lg-guide-tabs-title-bar" class="container s-lib-side-borders"></div>
 		<div id="s-lg-side-nav-content" class="container s-lib-side-borders pad-top-med">
 			<div class="row">
@@ -50,6 +51,8 @@
 							<ul class="nav nav-pills nav-stacked split-button-nav">
 								{{guide_nav}}
 							</ul>
+							<!-- Load profiles script only where it should appear -->
+							<script type="text/javascript" src="https://libapps.s3.amazonaws.com/sites/4408/include/guide-profiles.js"></script>
 							{{side_nav_boxes}}
 						</div>
 					</div>
