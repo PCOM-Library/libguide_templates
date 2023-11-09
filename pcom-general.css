@@ -67,6 +67,11 @@ a:hover {
 	text-decoration: none;
 }
 
+.pcom pre {
+  color: var(--pcom-text);
+  background: var(--pcom-cool-gray);
+  border-color: var(--pcom-light-blue);
+}
 
 .pcom input:focus, 
 .pcom select:focus {
