@@ -39,6 +39,7 @@ body {
 	font-size: 100% !important;
 	padding-left: 0;
 	padding-right: 0;
+	line-height: 1.5;
 	/* push footer to the bottom */
 	display: flex;
 	flex-direction: column;
