@@ -2094,5 +2094,10 @@ footer#page-footer {
 	margin: 0;
 }
 
-
-
+/***************************************
+ BOOKS FROM THE CATALOG - PRINT DISPLAY
+****************************************/
+.pcom-lg-book-catalog-link .fa-book { 
+	color: var(--pcom-dark-red); 
+	margin-right: 0.25em;
+}
