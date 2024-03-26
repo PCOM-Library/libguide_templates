@@ -1,5 +1,5 @@
 /********
- GENERAL 
+ GENERAL
  ********/
 
 * {	box-sizing: border-box; }
@@ -60,7 +60,7 @@ footer {
 	padding-bottom: .125rem;
 }
 
-a { 
+a {
 	text-decoration: underline;
 	color: var(--pcom-blue)
 }
@@ -89,7 +89,7 @@ p a span.fa-external-link {
   border-color: var(--pcom-light-blue);
 }
 
-.pcom input:focus, 
+.pcom input:focus,
 .pcom select:focus {
 	outline: solid 2px currentColor;
 	outline-offset: -5px !important;
@@ -126,7 +126,7 @@ input::placeholder,
 *******************/
 .admin-screen-only {
 	display: none;
-} 
+}
 
 /* wrap around items to be seen on the edit pages but not live pages */
 .admin-note {
@@ -134,7 +134,7 @@ input::placeholder,
 }
 
 /*******************
- SCREEN READER ONLY 
+ SCREEN READER ONLY
  *******************/
 .sr-only {
 	clip: rect(1px, 1px, 1px, 1px);
@@ -148,7 +148,7 @@ input::placeholder,
 }
 
 /**********
- SKIP LINK 
+ SKIP LINK
  **********/
 #s-lg-public-skiplink {
 	clip: rect(1px, 1px, 1px, 1px);
@@ -268,7 +268,7 @@ input::placeholder,
 	color: var(--pcom-white);
 	background: var(--pcom-blue);
 }
-#pcom-nav > ul > li > a, 
+#pcom-nav > ul > li > a,
 #pcom-nav > ul > li > button {
 	display: block;
 	width: 100%;
@@ -323,7 +323,7 @@ input::placeholder,
 #pcom-nav > ul > li > button + ul {
 	list-style: none;
 	padding-left: 1.5rem;
-	
+
 }
 
 #pcom-nav > ul > li > button + ul li a {
@@ -332,8 +332,8 @@ input::placeholder,
 	font-weight: bold;
 	font-size: 1rem;
 	line-height: 1;
-	padding: 0.75rem 0.75rem;	
-	text-decoration: none;		
+	padding: 0.75rem 0.75rem;
+	text-decoration: none;
 }
 
 #pcom-nav > ul > li > button + ul li a:hover {
@@ -360,12 +360,12 @@ input::placeholder,
 		border: none;
 		box-shadow: none;
 	}
-	
+
 	#pcom-nav > ul {
-		position: relative;		
+		position: relative;
 		padding: 0;
 	}
-	#pcom-nav > ul > li {			
+	#pcom-nav > ul > li {
 		display: inline-block;
 		position: relative;
 		background: transparent;
@@ -373,8 +373,8 @@ input::placeholder,
 
 	#pcom-nav > ul > li + li {
 	}
-	
-	#pcom-nav > ul > li > a, 
+
+	#pcom-nav > ul > li > a,
 	#pcom-nav > ul > li > button {
 		display: block;
 		width: 100%;
@@ -385,9 +385,9 @@ input::placeholder,
 		text-decoration: none;
 		font-size: 1rem;
 		line-height: 1;
-		padding: 0.75rem 0.625rem; 
+		padding: 0.75rem 0.625rem;
 	}
-	
+
 	#pcom-nav > ul > li > button + ul {
 		position: absolute;
 		right: 0;
@@ -397,7 +397,7 @@ input::placeholder,
 		background: var(--pcom-blue);
 		color: var(--pcom-white);
 		box-shadow: 0.25rem 0.25rem 0.375rem rgba(0, 0, 0, 0.6);
-	}	
+	}
 	#pcom-nav > ul > li > button + ul li {
 		display: block;
 	}
@@ -406,7 +406,7 @@ input::placeholder,
 		color: var(--pcom-white);
 		white-space: nowrap;
 		font-weight: bold;
-		padding: 0.625rem 1rem;	
+		padding: 0.625rem 1rem;
 		text-decoration: none;
 	}
 }
@@ -441,7 +441,7 @@ footer#page-footer {
 #s-lib-footer-public {
 	background: var(--pcom-cool-gray);
 	width: 100%;
-	padding: var(--pcom-body-padding);	
+	padding: var(--pcom-body-padding);
 	border-top: solid 2px var(--pcom-dark-blue);
 	position: relative;
 }
@@ -456,10 +456,10 @@ footer#page-footer {
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
 }
-#s-lib-footer-brand, 
-#s-lib-footer-login-link, 
-#s-lib-footer-privacy, 
-#s-lib-footer-rights, 
+#s-lib-footer-brand,
+#s-lib-footer-login-link,
+#s-lib-footer-privacy,
+#s-lib-footer-rights,
 #s-lib-footer-support-link {
 	display: block;
 	white-space: nowrap;
@@ -473,21 +473,21 @@ footer#page-footer {
 #s-lib-footer-rights {
 	grid-row: 2;
 	grid-column: 1;
-}	
+}
 #s-lib-footer-login-link {
 	grid-row: 1;
 	grid-column: 2;
 	text-align: right;
 }
 
-#s-lib-footer-support-link { 
+#s-lib-footer-support-link {
 	position: absolute;
 	bottom: var(--pcom-body-padding);
 	right: var(--pcom-body-padding);
 }
 
 /*******************
- PCOM CUSTOM FOOTER 
+ PCOM CUSTOM FOOTER
  *******************/
 #pcom-footer {
 	background-color: var(--pcom-dark-blue);
@@ -588,7 +588,7 @@ footer#page-footer {
 #pcom-footer-social-menu a:focus {
 	outline-offset: 2px;
 }
-	
+
 #pcom-footer-social-menu a.mail .fa {
 	position: relative;
 	top: -2px;
@@ -609,8 +609,8 @@ footer#page-footer {
 		text-align: left;
 		display: flex;
 	}
-	
-	
+
+
 	/* left-align the PCOM nav links */
 	#pcom-footer ul#footer-nav li:first-child {
 		padding-left: 0;
@@ -630,10 +630,10 @@ footer#page-footer {
 		width: 75%;
 	}
 	.pcom-guide-homepage #col2 {
-		width: 25%; 
+		width: 25%;
 		font-size: .875rem;
 		margin-top: 0;
-	}	
+	}
 }
 /* Ensure some padding when the screen gets small enough */
 @media (max-width: 768px) {
@@ -644,7 +644,7 @@ footer#page-footer {
 }
 
 /* branding */
-#s-lg-guide-header-info h1, 
+#s-lg-guide-header-info h1,
 .s-lib-header h1 {
 	font-size: 1.5rem;
 	font-weight: 700;
@@ -694,7 +694,7 @@ footer#page-footer {
 	background-color: var(--pcom-dark-blue);
 	border-top-left-radius: var(--pcom-border-radius);
 	border-top-right-radius: var(--pcom-border-radius);
-	
+
 }
 .pcom-guide-homepage #s-lg-hp-nav #s-lg-hp-nav-bottom {
 	background-color: var(--pcom-light-gray);
@@ -807,7 +807,7 @@ footer#page-footer {
 
 
 /************
- chat widget 
+ chat widget
  ************/
 .lcs_slide_out {
 	background-color: rgb(249, 249, 249);
@@ -818,7 +818,7 @@ footer#page-footer {
 	text-decoration: none;
 	color: var(--pcom-white) !important;
 	background-color: var(--pcom-dark-red) !important;
-	box-shadow: 0.25rem -0.25rem 0.375rem rgba(0, 0, 0, 0.6) !important; 
+	box-shadow: 0.25rem -0.25rem 0.375rem rgba(0, 0, 0, 0.6) !important;
 	border: 0 !important;
 	padding: .625em 1em !important;
 	text-transform: uppercase;
@@ -955,7 +955,7 @@ footer#page-footer {
 }
 
 /* GUIDE PAGE */
-#s-lg-guide-header-info h1, 
+#s-lg-guide-header-info h1,
 .s-lib-header h1 {
 	font-weight: 700;
 }
@@ -974,7 +974,7 @@ footer#page-footer {
 	border: solid 2px var(--pcom-dark-blue);
 	border-radius: var(--pcom-border-radius);
 	color: var(--pcom-text);
-	font-weight: 400;	
+	font-weight: 400;
 }
 
 #s-lg-tabs-container .nav-pills > li > a:focus {
@@ -1111,14 +1111,14 @@ footer#page-footer {
 }
 
 .s-lib-box-content h3,
-.s-lib-box-content h4 { 
+.s-lib-box-content h4 {
 	font-weight: 700;
 }
 .s-lib-box-content blockquote {
 	font-size: 1rem;
 	border-left-color: var(--pcom-cyan);
 }
-.s-lib-box-content blockquote, 
+.s-lib-box-content blockquote,
 .s-lib-box-content p {
 	overflow-wrap: break-word;
 }
@@ -1216,7 +1216,7 @@ footer#page-footer {
 .pcom-profile .s-lib-box-content {
 	padding: 0;
 	display: flex;
-	justify-content: space-between; 
+	justify-content: space-between;
 }
 
 .pcom-profile .s-lib-box-content a {
@@ -1427,7 +1427,7 @@ footer#page-footer {
 .pcom-subject-page #s-lg-sb-guides .s-lib-box-content {
 	padding: 0;
 	display: flex;
-	justify-content: space-between; 
+	justify-content: space-between;
 }
 
 .pcom-subject-page #s-lg-sb-guides .s-lib-box-content a {
@@ -1655,7 +1655,7 @@ footer#page-footer {
 }
 
 .pcom-search h1 {
-	display: flex;	
+	display: flex;
 }
 .pcom-search h1 div:first-of-type {
 	white-space: nowrap;
@@ -1688,7 +1688,7 @@ footer#page-footer {
 		border-radius: 0;
 	}
 	.pcom-search .pcom-tablist button:focus {
-		border-radius: 0; 
+		border-radius: 0;
 	}
 	.pcom-search .pcom-tablist button:first-of-type {
 		border-top-left-radius: var(--pcom-border-radius);
@@ -1799,7 +1799,7 @@ footer#page-footer {
 		display: inline-block;
 	padding: 0 0.25em;
 
-	
+
 }
 
 .pcom-search .s-srch-result .s-srch-result-url {
@@ -1940,7 +1940,7 @@ footer#page-footer {
 }
 
 .pcom-search .pcom-pager ul {
-	list-style: none; 
+	list-style: none;
 	padding: 0;
 }
 .pcom-search .pcom-pager ul li {
@@ -1970,12 +1970,12 @@ footer#page-footer {
 .pcom-search .pcom-pager ul li:first-of-type button {
 	border-top-left-radius: var(--pcom-border-radius);
 	border-bottom-left-radius: var(--pcom-border-radius);
-} 
+}
 
 .pcom-search .pcom-pager ul li:last-of-type button {
 	border-top-right-radius: var(--pcom-border-radius);
 	border-bottom-right-radius: var(--pcom-border-radius);
-} 
+}
 .pcom-search .pcom-pager ul li button[aria-current] {
 	background: var(--pcom-cool-gray);
 	color: var(--pcom-black);
@@ -2023,7 +2023,7 @@ footer#page-footer {
 	font-weight: bold;
 }
 
-.pcom-guide table.pcom-table td, 
+.pcom-guide table.pcom-table td,
 .pcom-guide table.pcom-table th {
 	padding: .25em .5em;
 	border: solid 1px var(--pcom-text);
@@ -2073,7 +2073,7 @@ footer#page-footer {
 }
 
 /*************
- BULLETIN BOX 
+ BULLETIN BOX
 **************/
 .pcom-bulletin-box {
 	width: 80%;
@@ -2082,7 +2082,7 @@ footer#page-footer {
 	border-radius: var(--pcom-border-radius);
 	text-align: center;
 	padding: .75rem;
-	
+
 }
 .pcom-bulletin-box h3 {
 	font-size: 1.25rem;
@@ -2097,7 +2097,24 @@ footer#page-footer {
 /***************************************
  BOOKS FROM THE CATALOG - PRINT DISPLAY
 ****************************************/
-.pcom-lg-book-catalog-link .fa-book { 
-	color: var(--pcom-dark-red); 
+.pcom-lg-book-catalog-link .fa-book {
+	color: var(--pcom-dark-red);
 	margin-right: 0.25em;
+}
+
+/***************************************
+ BOOKS FROM THE CATALOG - INDENTING
+****************************************/
+/* Only "indent" books that have cover images */
+.s-lg-book-props:has(.s-lg-book-cover img) {
+	margin-left: 100px;
+	position: relative;
+}
+.s-lg-book-props:has(.s-lg-book-cover img) .s-lg-book-cover img {
+	position: absolute;
+	left: -100px;
+	top: 0.25rem;
+}
+ul:has(.s-lg-book-props) {
+	padding-left: .5rem;
 }

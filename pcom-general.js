@@ -112,3 +112,22 @@ $(document).ready(function() {
 	}
 });
 
+/* Add min-height to books with cover images for indenting purposes */
+
+window.addEventListener('load', function(event) { 
+	let books = document.querySelectorAll('.s-lg-book-props:has(.s-lg-book-cover img)');
+	for(b of books) {
+		let books = document.querySelectorAll('.s-lg-book-props:has(.s-lg-book-cover img)');
+		let i = b.querySelector('.s-lg-book-cover img');
+		if(i.complete) {
+			b.style.minHeight = i.height + 'px';
+		}
+		else {
+			i.onload = function(i_evt) { 
+				let book = i_evt.target.closest('.s-lg-book-props');
+				if(book != null)
+					book.style.minHeight = i_evt.target.height + 'px';
+			};
+		}
+	}
+});
