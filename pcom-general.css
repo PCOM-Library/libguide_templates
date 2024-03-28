@@ -2106,15 +2106,34 @@ footer#page-footer {
  BOOKS FROM THE CATALOG - INDENTING
 ****************************************/
 /* Only "indent" books that have cover images */
-.s-lg-book-props:has(.s-lg-book-cover img) {
+.pcom-guide .s-lg-book-props:has(.s-lg-book-cover img) {
 	margin-left: 100px;
 	position: relative;
 }
-.s-lg-book-props:has(.s-lg-book-cover img) .s-lg-book-cover img {
+.pcom-guide .s-lg-book-props:has(.s-lg-book-cover img) .s-lg-book-cover img {
 	position: absolute;
 	left: -100px;
 	top: 0.25rem;
 }
-ul:has(.s-lg-book-props) {
+.pcom-guide ul:has(.s-lg-book-props) {
 	padding-left: .5rem;
+}
+
+/***************************************
+ LINK LIST - INDENTING
+****************************************/
+.pcom-guide .s-lg-link-list li:has(a img) {
+	position: relative;
+	padding-left: 100px;
+}
+.pcom-guide .s-lg-link-list li:has(a img) a img {
+	position: absolute;
+	width: 90px;
+	left: 0px;
+}
+.pcom-guide .s-lg-link-list li.s-lg-tn-li.clearfix {
+	list-style-type: disc;
+}
+.pcom-guide .s-lg-link-list li.s-lg-tn-li.clearfix:before {
+	content: none;
 }
