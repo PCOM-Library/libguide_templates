@@ -2122,11 +2122,11 @@ footer#page-footer {
 /***************************************
  LINK LIST - INDENTING
 ****************************************/
-.pcom-guide .s-lg-link-list li:has(a img) {
+.pcom-guide .s-lg-link-list li.s-lg-tn-li:has(a img) {
 	position: relative;
 	padding-left: 100px;
 }
-.pcom-guide .s-lg-link-list li:has(a img) a img {
+.pcom-guide .s-lg-link-list li.s-lg-tn-li:has(a img) a img {
 	position: absolute;
 	width: 90px;
 	left: 0px;
