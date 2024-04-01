@@ -2132,7 +2132,7 @@ footer#page-footer {
 	left: 0px;
 }
 .pcom-guide .s-lg-link-list li.s-lg-tn-li.clearfix {
-	list-style-type: disc;
+	list-style-type: none;
 }
 .pcom-guide .s-lg-link-list li.s-lg-tn-li.clearfix:before {
 	content: none;
