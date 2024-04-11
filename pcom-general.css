@@ -1114,20 +1114,41 @@ footer#page-footer {
 .s-lib-box-content h4 {
 	font-weight: 700;
 }
-.s-lib-box-content blockquote {
-	font-size: 1rem;
-	border-left-color: var(--pcom-cyan);
-}
+
+/*****************
+ BLOCKQUOTE
+******************/
 .s-lib-box-content blockquote,
 .s-lib-box-content p {
 	overflow-wrap: break-word;
 }
-
+.pcom-guide .s-lib-box-content blockquote {
+	background: var(--pcom-cool-gray);
+	border-radius: var(--pcom-border-radius);
+	border: solid 2px var(--pcom-dark-gray);
+	margin: .75rem .875rem;
+	font-size: 1rem;
+}
+.pcom-guide .s-lib-box-content blockquote footer {
+	color: var(--pcom-text-color);
+	font-size:.9375rem;
+	margin-left: 4rem;
+	padding-left: 1rem;
+	position: relative;
+}
+.pcom-guide .s-lib-box-content blockquote footer:before {
+	font-weight: 700;
+	display: block;
+	position: absolute;
+	left: -.25rem;
+}
+.pcom-guide .s-lib-box-content blockquote p:has(+ footer) {
+	margin-bottom: 0.25rem;
+}
 
 /*************
  PROFILE PAGE
 **************/
-
 .pcom-profile #s-lib-public-header-desc > div {
 	display: none;
 }
