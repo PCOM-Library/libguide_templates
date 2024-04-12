@@ -2130,6 +2130,7 @@ footer#page-footer {
 .pcom-guide .s-lg-book-props:has(.s-lg-book-cover img) {
 	margin-left: 100px;
 	position: relative;
+	margin-bottom: .5rem;
 }
 .pcom-guide .s-lg-book-props:has(.s-lg-book-cover img) .s-lg-book-cover img {
 	position: absolute;
@@ -2146,6 +2147,7 @@ footer#page-footer {
 .pcom-guide .s-lg-link-list li.s-lg-tn-li:has(a img) {
 	position: relative;
 	padding-left: 100px;
+	margin-bottom: .5rem;
 }
 .pcom-guide .s-lg-link-list li.s-lg-tn-li:has(a img) a img {
 	position: absolute;

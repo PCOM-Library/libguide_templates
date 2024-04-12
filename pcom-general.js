@@ -118,13 +118,13 @@ window.addEventListener('load', function(event) {
 	for(b of books) {
 		let i = b.querySelector('.s-lg-book-cover img');
 		if(i.complete) {
-			b.style.minHeight = i.height + 'px';
+			b.style.minHeight = 'calc(5px + .5rem + ' + i.height + 'px)'
 		}
 		else {
 			i.onload = function(i_evt) { 
 				let book = i_evt.target.closest('.s-lg-book-props');
 				if(book != null)
-					book.style.minHeight = i_evt.target.height + 'px';
+					book.style.minHeight = 'calc(5px + .5rem + ' + i.height + 'px)'
 			};
 		}
 	}
@@ -136,13 +136,13 @@ window.addEventListener('load', function(event) {
 	for(b of links) {
 		let i = b.querySelector('a img');
 		if(i.complete) {
-			b.style.minHeight = i.height + 'px';
+			b.style.minHeight = 'calc(5px + .5rem + ' + i.height + 'px)';
 		}
 		else {
 			i.onload = function(i_evt) { 
 				let book = i_evt.target.closest('.s-lg-book-props');
 				if(book != null)
-					book.style.minHeight = i_evt.target.height + 'px';
+					book.style.minHeight = 'calc(5px + .5rem + ' + i.height + 'px)'
 			};
 		}
 	}
