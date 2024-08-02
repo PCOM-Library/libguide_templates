@@ -49,7 +49,6 @@ const PROGRAMS = [
 	'Biomedical Sciences',
 	'Forensic Medicine',
 	'Medical Laboratory Science',
-	'Organizational Development and Leadership',
 	'Osteopathic Medicine',
 	'Pharmacy',
 	'Physical Therapy',
