@@ -165,14 +165,14 @@
 	margin: 0 .5rem .25rem .5rem;
 	break-inside: avoid;
 	position: relative;
-	padding-left: .75em;
+	padding-left: .6875em;
 }
 .pcom-guide-homepage #pcom-quick-links .s-lib-box .s-lib-box-content ul li:before {
 	content: '\f0c8';
 	font-family: FontAwesome;
 	font-size: .5em;
 	position: absolute;
-	top: .5rem;
+	top: .5em;
 	left: 0;
 	color: var(--pcom-dark-red);
 }
