@@ -1028,6 +1028,7 @@ footer#page-footer {
 }
 
 .s-lib-box .s-lib-box-title {
+	color: var(--pcom-white);
 	background: var(--pcom-dark-blue);
 	font-size: 1.0625rem;
 	letter-spacing: 0.025em;
