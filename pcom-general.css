@@ -65,7 +65,8 @@ footer {
 .h4, h4 {
 	font-size: 1rem;
 	font-style: italic;
-	padding-bottom: .0625rem;
+	padding-bottom: 0;
+	margin-bottom: .125rem;
 }
 
 a {
