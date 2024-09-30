@@ -62,6 +62,12 @@ footer {
 	padding-bottom: .125rem;
 }
 
+.h4, h4 {
+	font-size: 1rem;
+	font-style: italics;
+	padding-bottom: .0625rem;
+}
+
 a {
 	text-decoration: underline;
 	color: var(--pcom-blue)
