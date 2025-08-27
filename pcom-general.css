@@ -1125,6 +1125,15 @@ footer#page-footer {
 	font-weight: 700;
 }
 
+/* fix some top margin stuff */
+.pcom-guide .s-lib-box-content > div:first-child > h3:first-child {
+  margin-top: 0;
+}
+.pcom-guide .s-lib-box-content > div > h3:first-child {
+  margin-top: 10px;
+}
+
+
 /*****************
  BLOCKQUOTE
 ******************/
