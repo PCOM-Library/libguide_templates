@@ -60,9 +60,9 @@ function addPcomProfileBox(profile) {
 		pcom_info.append( profile.querySelector('.pcom-profile-campus') );
 	}
 	else {
-		const reCampus = (?:Moultrie|Philadelphia|Suwanee) [Cc]ampus/gm;
+		const reCampus = /(?:Moultrie|Philadelphia|Suwanee) [Cc]ampus/gm;
 		for(e of profile.querySelectorAll('.s-lib-profile-contact div')) {
-			if(re.test(e.innerText.trim())) {
+			if(reCampus.test(e.innerText.trim())) {
 				div = document.createElement('DIV');
 				div.classList.add('pcom-profile-campus');
 				div.innerText = e.innerText.trim();
