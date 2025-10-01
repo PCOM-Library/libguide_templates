@@ -56,8 +56,20 @@ function addPcomProfileBox(profile) {
 	}
 	
 	// campus 
-	if(profile.querySelector('.pcom-profile-campus') != null)
+	if(profile.querySelector('.pcom-profile-campus') != null) {
 		pcom_info.append( profile.querySelector('.pcom-profile-campus') );
+	}
+	else {
+		const reCampus = (?:Moultrie|Philadelphia|Suwanee) [Cc]ampus/gm;
+		for(e of profile.querySelectorAll('.s-lib-profile-contact div')) {
+			if(re.test(e.innerText.trim())) {
+				div = document.createElement('DIV');
+				div.classList.add('pcom-profile-campus');
+				div.innerText = e.innerText.trim();
+				pcom_info.appendChild(div);
+			}
+		}
+	}
 	
 	// mail
 	let mail = profile.querySelector('.s-lib-profile-email a');
@@ -72,9 +84,9 @@ function addPcomProfileBox(profile) {
 	}
 	
 	// phone
-	const re = /[0-9]{3}-[0-9]{3}-[0-9]{4}/gm;
+	const rePhone = /[0-9]{3}-[0-9]{3}-[0-9]{4}/gm;
 	for(e of profile.querySelectorAll('.s-lib-profile-contact div')) {
-		if(re.test(e.innerText.trim())) {
+		if(rePhone.test(e.innerText.trim())) {
 			div = document.createElement('DIV');
 			div.classList.add('pcom-profile-phone');
 			a = document.createElement('A');
