@@ -461,7 +461,7 @@ footer#page-footer {
 #s-lib-footer-public > div:first-of-type {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, 1fr);
+	grid-template-rows: repeat(1, 1fr);
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
 }
@@ -473,6 +473,12 @@ footer#page-footer {
 	display: block;
 	white-space: nowrap;
 	text-align: left;
+}
+
+/* Hide due to new footer: 2025-10-10 */
+#s-lib-footer-rights, 
+#s-lib-footer-support-link {
+	display: none;
 }
 
 #s-lib-footer-brand {
