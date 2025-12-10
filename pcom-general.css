@@ -2169,12 +2169,12 @@ footer#page-footer {
 /***************************************
  LINK LIST - INDENTING
 ****************************************/
-.pcom-guide .s-lg-link-list li.s-lg-tn-li:has(a img) {
+.pcom-guide .s-lg-link-list li.s-lg-tn-li:has(.s-lg-tn img) {
 	position: relative;
 	padding-left: 100px;
 	margin-bottom: .5rem;
 }
-.pcom-guide .s-lg-link-list li.s-lg-tn-li:has(a img) a img {
+.pcom-guide .s-lg-link-list li.s-lg-tn-li:has(.s-lg-tn img) .s-lg-tn img {
 	position: absolute;
 	width: 90px;
 	left: 0px;
@@ -2184,4 +2184,43 @@ footer#page-footer {
 }
 .pcom-guide .s-lg-link-list li.s-lg-tn-li.clearfix:before {
 	content: none;
+}
+
+/**************************
+ EQUIPMENT LISTS
+ **************************/
+ @counter-style eqdash {
+	system: cyclic;
+	symbols: '\2043';
+	suffix: ' ';
+}
+
+.s-lg-link-list:has(img[src$="eq.png"]) {
+	padding-left: 0;
+
+	li.s-lg-tn-li {
+		span > span {
+			font-weight: 700;
+		}
+
+		img {
+			padding: 2px;
+		}
+
+		ul:has(.s-lg-icon) {
+			display: none;
+		}
+
+		.s-lg-link-desc {
+			border-top: solid 1px currentColor;
+			padding-top: 3px;
+		}
+		.s-lg-link-desc ul {
+			padding-left: 1.5rem;
+			list-style: eqdash;
+		}
+		.s-lg-link-desc ul > br {
+			display: none;
+		}
+	}
 }

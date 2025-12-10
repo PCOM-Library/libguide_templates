@@ -132,17 +132,17 @@ window.addEventListener('load', function(event) {
 
 /* Add min-height to link lists with thumbnail images for indenting purposes */
 window.addEventListener('load', function(event) { 
-	let links = document.querySelectorAll('.s-lg-link-list li:has(a img)');
-	for(b of links) {
-		let i = b.querySelector('a img');
-		if(i.complete) {
+	let items = document.querySelectorAll('.s-lg-link-list li.s-lg-tn-li:has(.s-lg-tn img)');
+	for(b of items) {
+		let i = b.querySelector('.s-lg-tn img');
+		if( i.complete) {
 			b.style.minHeight = 'calc(5px + .5rem + ' + i.height + 'px)';
 		}
 		else {
 			i.onload = function(i_evt) { 
-				let book = i_evt.target.closest('.s-lg-book-props');
-				if(book != null)
-					book.style.minHeight = 'calc(5px + .5rem + ' + i.height + 'px)'
+				let item = i_evt.target.closest('li.s-lg-tn-li > div');
+				if(item != null)
+					item.style.minHeight = 'calc(5px + .5rem + ' + i.height + 'px)'
 			};
 		}
 	}
